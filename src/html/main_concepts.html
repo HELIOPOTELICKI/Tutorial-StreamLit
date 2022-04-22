@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceitos Básicos</title>
+</head>
+
+<body>
+
+    <div>
+
+        <section class="container_InnerContainer__gGy_B" id="documentation">
+
+            <article id="content-container" class="leaf-page container_ArticleContainer__P0WuI">
+
+                <div class="content container_ContentContainer__3105j"><a name="main-concepts"
+                        class="headerLink_HashLink___Wih5"></a>
+                    <h1 class="headerLink_HeaderContainer__68tak group"><a aria-hidden="true" tabindex="-1"
+                            href="#main-concepts"><span class="icon icon-link"></span></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Principais conceitos</font>
+                        </font>
+
+                    </h1>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Trabalhar com Streamlit é simples. </font>
+                            <font style="vertical-align: inherit;">Primeiro, você espalha alguns comandos Streamlit em
+                                um script Python normal, depois o executa com </font>
+                        </font><code>streamlit run</code>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">:</font>
+                        </font>
+                    </p>
+                    <section class="code_Container__v4rq_">
+                        <div class="code-toolbar">
+                            <pre class="language-bash"
+                                tabindex="0"><code class="language-bash">streamlit run your_script.py <span class="token punctuation">[</span>-- script args<span class="token punctuation">]</span></code></pre>
+
+                        </div>
+                    </section>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Assim que você executar o script conforme mostrado
+                                acima, um servidor Streamlit local será ativado e seu aplicativo será aberto em uma nova
+                                guia no navegador da Web padrão. </font>
+                            <font style="vertical-align: inherit;">O aplicativo é sua tela, onde você desenhará
+                                gráficos, texto, widgets, tabelas e muito mais.</font>
+                        </font>
+                    </p>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">O que é desenhado no aplicativo é com você. </font>
+                            <font style="vertical-align: inherit;">Por exemplo
+                            </font>
+                        </font><a href="/library/api-reference/text/st.text"><code>st.text</code></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">, grava texto bruto em seu aplicativo e
+                            </font>
+                        </font><a href="/library/api-reference/charts/st.line_chart"><code>st.line_chart</code></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">desenha - você adivinhou - um gráfico de linhas.
+                            </font>
+                            <font style="vertical-align: inherit;">Consulte nossa </font>
+                        </font><a href="/library/api-reference">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">documentação da API</font>
+                            </font>
+                        </a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;"> para ver todos os comandos disponíveis para você.
+                            </font>
+                        </font>
+                    </p>
+                    <section class="callout_Container__IU_XU note_Note__d8Rsn">
+                        <section class="iconHeader_Container__w4_WA"><i
+                                class="iconHeader_Icon__X6Kz_ iconHeader_LightBlueBackground__WINgP"
+                                style="transform:rotate(45deg)">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">push_pin</font>
+                                </font>
+                            </i>
+                            <h4 class="iconHeader_Title__vFC9I iconHeader_LightBlueText__XIICP">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Observação</font>
+                                </font>
+                            </h4>
+                        </section>
+                        <p>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Ao passar ao seu script alguns argumentos
+                                    personalizados, eles devem ser passados ​​após dois traços. </font>
+                                <font style="vertical-align: inherit;">Caso contrário, os argumentos serão interpretados
+                                    como argumentos para o próprio Streamlit.</font>
+                            </font>
+                        </p>
+                    </section>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Outra maneira de executar o Streamlit é executá-lo
+                                como um módulo Python. </font>
+                            <font style="vertical-align: inherit;">Isso pode ser útil ao configurar um IDE como o
+                                PyCharm para trabalhar com o Streamlit:</font>
+                        </font>
+                    </p>
+                    <section class="code_Container__v4rq_">
+                        <div class="code-toolbar">
+                            <pre class="language-bash" tabindex="0"><code class="language-bash"><span class="token comment"># Running</span><font></font>
+$ python -m streamlit run your_script.py<font></font>
+<font></font>
+<span class="token comment"># is equivalent to:</span>
+$ streamlit run your_script.py</code></pre>
+
+                        </div>
+                    </section>
+                    <section class="callout_Container__IU_XU tip_Tip__UYVQt">
+
+                        <p>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Você também pode passar um URL para </font>
+                            </font><code>streamlit run</code>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">! </font>
+                                <font style="vertical-align: inherit;">Isso é ótimo quando combinado com Github Gists.
+                                </font>
+                                <font style="vertical-align: inherit;">Por exemplo:</font>
+                            </font>
+                        </p>
+                        <section class="code_Container__v4rq_">
+                            <div class="code-toolbar">
+                                <pre class="language-bash"
+                                    tabindex="0"><code class="language-bash">$ streamlit run https://raw.githubusercontent.com/streamlit/demo-uber-nyc-pickups/master/streamlit_app.py</code></pre>
+
+                            </div>
+                        </section>
+                    </section><a name="development-flow" class="headerLink_HashLink___Wih5"></a>
+                    <h2 class="headerLink_HeaderContainer__68tak group"><a aria-hidden="true" tabindex="-1"
+                            href="#development-flow"><span class="icon icon-link"></span></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Fluxo de desenvolvimento</font>
+                        </font>
+
+                    </h2>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Toda vez que você quiser atualizar seu aplicativo,
+                                salve o arquivo de origem. </font>
+                            <font style="vertical-align: inherit;">Quando você faz isso, o Streamlit detecta se há uma
+                                alteração e pergunta se você deseja executar novamente seu aplicativo. </font>
+                            <font style="vertical-align: inherit;">Escolha "Sempre executar novamente" no canto superior
+                                direito da tela para atualizar automaticamente seu aplicativo sempre que você alterar o
+                                código-fonte.</font>
+                        </font>
+                    </p>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Isso permite que você trabalhe em um loop interativo
+                                rápido: você digita algum código, salva, experimenta ao vivo, depois digita mais código,
+                                salva, experimenta e assim por diante até ficar satisfeito com os resultados. </font>
+                            <font style="vertical-align: inherit;">Esse laço estreito entre a codificação e a
+                                visualização dos resultados ao vivo é uma das maneiras pelas quais o Streamlit facilita
+                                sua vida.</font>
+                        </font>
+                    </p>
+                    <section class="callout_Container__IU_XU tip_Tip__UYVQt">
+
+                        <p>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Ao desenvolver um aplicativo Streamlit, é
+                                    recomendável colocar as janelas do editor e do navegador lado a lado, para que o
+                                    código e o aplicativo possam ser vistos ao mesmo tempo. </font>
+                                <font style="vertical-align: inherit;">De uma chance!</font>
+                            </font>
+                        </p>
+                    </section><a name="data-flow" class="headerLink_HashLink___Wih5"></a>
+                    <h2 class="headerLink_HeaderContainer__68tak group"><a aria-hidden="true" tabindex="-1"
+                            href="#data-flow"><span class="icon icon-link"></span></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Fluxo de dados</font>
+                        </font>
+
+                    </h2>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">A arquitetura do Streamlit permite que você escreva
+                                aplicativos da mesma forma que escreve scripts Python simples. </font>
+                            <font style="vertical-align: inherit;">Para desbloquear isso, os aplicativos Streamlit têm
+                                um fluxo de dados exclusivo: sempre que algo deve ser atualizado na tela, o Streamlit
+                                executa novamente todo o seu script Python de cima para baixo.</font>
+                        </font>
+                    </p>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Isso pode acontecer em duas situações:</font>
+                        </font>
+                    </p>
+                    <ul>
+                        <li>
+                            <p>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Sempre que você modificar o código-fonte do
+                                        seu aplicativo.</font>
+                                </font>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Sempre que um usuário interage com widgets no
+                                        aplicativo. </font>
+                                    <font style="vertical-align: inherit;">Por exemplo, ao arrastar um controle
+                                        deslizante, inserir texto em uma caixa de entrada ou clicar em um botão.</font>
+                                </font>
+                            </p>
+                        </li>
+                    </ul>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Sempre que um retorno de chamada é passado para um
+                                widget por meio do parâmetro </font>
+                        </font><code>on_change</code>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">(ou </font>
+                        </font><code>on_click</code>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">), o retorno de chamada sempre será executado antes
+                                do resto do seu script. </font>
+                            <font style="vertical-align: inherit;">Para obter detalhes sobre a API de retornos de
+                                chamada, consulte nosso </font>
+                        </font><a href="/library/api-reference/session-state#use-callbacks-to-update-session-state">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Guia de referência da API de estado de sessão
+                                </font>
+                            </font>
+                        </a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;"> .</font>
+                        </font>
+                    </p>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">E para tornar tudo isso rápido e contínuo, o
+                                Streamlit faz um trabalho pesado para você nos bastidores. </font>
+                            <font style="vertical-align: inherit;">Um grande jogador nessa história é o
+                            </font>
+                        </font><a href="#caching"><code>@st.cache</code></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">decorador, que permite que os desenvolvedores pulem
+                                certos cálculos caros quando seus aplicativos forem executados novamente. </font>
+                            <font style="vertical-align: inherit;">Abordaremos o cache posteriormente nesta página.
+                            </font>
+                        </font>
+                    </p><a name="display-and-style-data" class="headerLink_HashLink___Wih5"></a>
+                    <h2 class="headerLink_HeaderContainer__68tak group"><a aria-hidden="true" tabindex="-1"
+                            href="#display-and-style-data"><span class="icon icon-link"></span></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Dados de exibição e estilo</font>
+                        </font>
+
+                    </h2>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Existem algumas maneiras de exibir dados (tabelas,
+                                matrizes, quadros de dados) em aplicativos Streamlit. </font>
+                        </font><a href="/library/get-started/main-concepts#use-magic">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Abaixo</font>
+                            </font>
+                        </a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;"> , você será apresentado ao </font>
+                        </font><em>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">magic</font>
+                            </font>
+                        </em>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">
+                                e </font>
+                        </font><a href="/library/api-reference/write-magic/st.write"><code>st.write()</code></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">, que pode ser usado para escrever qualquer coisa, de
+                                texto a tabelas. </font>
+                            <font style="vertical-align: inherit;">Depois disso, vamos dar uma olhada nos métodos
+                                projetados especificamente para visualizar dados.</font>
+                        </font>
+                    </p><a name="use-magic" class="headerLink_HashLink___Wih5"></a>
+                    <h3 class="headerLink_HeaderContainer__68tak group"><a aria-hidden="true" tabindex="-1"
+                            href="#use-magic"><span class="icon icon-link"></span></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Usar magia</font>
+                        </font>
+
+                    </h3>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Você também pode gravar em seu aplicativo sem chamar
+                                nenhum método Streamlit. </font>
+                            <font style="vertical-align: inherit;">O Streamlit suporta " </font>
+                        </font><a href="/library/api-reference/write-magic/magic">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">comandos mágicos</font>
+                            </font>
+                        </a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;"> ", o que significa que você não precisa usar
+                            </font>
+                        </font><a href="/library/api-reference/write-magic/st.write"><code>st.write()</code></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">nada! </font>
+                            <font style="vertical-align: inherit;">Para ver isso em ação, tente este trecho:</font>
+                        </font>
+                    </p>
+                    <section class="code_Container__v4rq_">
+                        <div class="code-toolbar">
+                            <pre class="language-python" tabindex="0"><code class="language-python"><span class="token triple-quoted-string string">"""
+# My first app
+Here's our first attempt at using data to create a table:
+"""</span><font></font>
+<font></font>
+<span class="token keyword">import</span> streamlit <span class="token keyword">as</span> st
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd<font></font>
+df <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token string">'first column'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token string">'second column'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">40</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><font></font>
+<font></font>
+df</code></pre>
+
+                        </div>
+                    </section>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Sempre que o Streamlit vê uma variável ou um valor
+                                literal em sua própria linha, ele automaticamente grava isso em seu aplicativo usando
+                            </font>
+                        </font><a href="/library/api-reference/write-magic/st.write"><code>st.write()</code></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">. </font>
+                            <font style="vertical-align: inherit;">Para obter mais informações, consulte a documentação
+                                sobre </font>
+                        </font><a href="/library/api-reference/write-magic/magic">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">comandos mágicos</font>
+                            </font>
+                        </a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;"> .</font>
+                        </font>
+                    </p><a name="write-a-data-frame" class="headerLink_HashLink___Wih5"></a>
+                    <h3 class="headerLink_HeaderContainer__68tak group"><a aria-hidden="true" tabindex="-1"
+                            href="#write-a-data-frame"><span class="icon icon-link"></span></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Escreva um quadro de dados</font>
+                        </font>
+
+                    </h3>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Junto com </font>
+                        </font><a href="/library/api-reference/write-magic/magic">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">os comandos mágicos</font>
+                            </font>
+                        </a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;"> ,
+                            </font>
+                        </font><a href="/library/api-reference/write-magic/st.write"><code>st.write()</code></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">está o "canivete suíço" da Streamlit. </font>
+                            <font style="vertical-align: inherit;">Você pode passar quase qualquer coisa para </font>
+                        </font><a href="/library/api-reference/write-magic/st.write"><code>st.write()</code></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">: texto, dados, figuras Matplotlib, gráficos Altair e
+                                muito mais. </font>
+                            <font style="vertical-align: inherit;">Não se preocupe, o Streamlit descobrirá e renderizará
+                                as coisas da maneira certa.</font>
+                        </font>
+                    </p>
+                    <section class="code_Container__v4rq_">
+                        <div class="code-toolbar">
+                            <pre class="language-python"
+                                tabindex="0"><code class="language-python"><span class="token keyword">import</span> streamlit <span class="token keyword">as</span> st
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd<font></font>
+<font></font>
+st<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">"Here's our first attempt at using data to create a table:"</span><span class="token punctuation">)</span>
+st<span class="token punctuation">.</span>write<span class="token punctuation">(</span>pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token string">'first column'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">'second column'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">40</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+
+                        </div>
+                    </section>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Existem outras funções específicas de dados como
+                            </font>
+                        </font><a href="/library/api-reference/data/st.dataframe"><code>st.dataframe()</code></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">e
+                            </font>
+                        </font><a href="/library/api-reference/data/st.table"><code>st.table()</code></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">que você também pode usar para exibir dados. </font>
+                            <font style="vertical-align: inherit;">Vamos entender quando usar esses recursos e como
+                                adicionar cores e estilos aos seus quadros de dados.</font>
+                        </font>
+                    </p>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Você pode estar se perguntando: "por que eu não
+                                usaria sempre </font>
+                        </font><code>st.write()</code>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">?" </font>
+                            <font style="vertical-align: inherit;">Há algumas razões:</font>
+                        </font>
+                    </p>
+                    <ol>
+                        <li><em>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Magic</font>
+                                </font>
+                            </em>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;"> e </font>
+                            </font><a href="/library/api-reference/write-magic/st.write"><code>st.write()</code></a>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">inspecione o tipo de dados que você passou e, em
+                                    seguida, decida como melhor renderizá-los no aplicativo. </font>
+                                <font style="vertical-align: inherit;">Às vezes você quer desenhar de outra maneira.
+                                </font>
+                                <font style="vertical-align: inherit;">Por exemplo, em vez de desenhar um dataframe como
+                                    uma tabela interativa, você pode querer desenhá-lo como uma tabela estática usando
+                                </font>
+                            </font><code>st.table(df)</code>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">.</font>
+                            </font>
+                        </li>
+                        <li>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">A segunda razão é que outros métodos retornam um
+                                    objeto que pode ser usado e modificado, seja adicionando dados a ele ou
+                                    substituindo-o.</font>
+                            </font>
+                        </li>
+                        <li>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Por fim, se você usar um método Streamlit mais
+                                    específico, poderá passar argumentos adicionais para personalizar seu comportamento.
+                                </font>
+                            </font>
+                        </li>
+                    </ol>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Por exemplo, vamos criar um data frame e alterar sua
+                                formatação com um
+                            </font>
+                        </font><code>Styler</code>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">objeto Pandas. </font>
+                            <font style="vertical-align: inherit;">Neste exemplo, você usará o Numpy para gerar uma
+                                amostra aleatória e o </font>
+                        </font><a href="/library/api-reference/data/st.dataframe"><code>st.dataframe()</code></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">método para desenhar uma tabela interativa.</font>
+                        </font>
+                    </p>
+                    <section class="callout_Container__IU_XU note_Note__d8Rsn">
+                        <section class="iconHeader_Container__w4_WA"><i
+                                class="iconHeader_Icon__X6Kz_ iconHeader_LightBlueBackground__WINgP"
+                                style="transform:rotate(45deg)">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">push_pin</font>
+                                </font>
+                            </i>
+                            <h4 class="iconHeader_Title__vFC9I iconHeader_LightBlueText__XIICP">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Observação</font>
+                                </font>
+                            </h4>
+                        </section>
+                        <p>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Este exemplo usa Numpy para gerar uma amostra
+                                    aleatória, mas você pode usar Pandas DataFrames, matrizes Numpy ou matrizes Python
+                                    simples.</font>
+                            </font>
+                        </p>
+                    </section>
+                    <section class="code_Container__v4rq_">
+                        <div class="code-toolbar">
+                            <pre class="language-python"
+                                tabindex="0"><code class="language-python"><span class="token keyword">import</span> streamlit <span class="token keyword">as</span> st
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np<font></font>
+<font></font>
+dataframe <span class="token operator">=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span>
+st<span class="token punctuation">.</span>dataframe<span class="token punctuation">(</span>dataframe<span class="token punctuation">)</span></code></pre>
+
+                        </div>
+                    </section>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Vamos expandir o primeiro exemplo usando o </font>
+                        </font><code>Styler</code>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">objeto Pandas para destacar alguns elementos na
+                                tabela interativa.</font>
+                        </font>
+                    </p>
+                    <section class="code_Container__v4rq_">
+                        <div class="code-toolbar">
+                            <pre class="language-python"
+                                tabindex="0"><code class="language-python"><span class="token keyword">import</span> streamlit <span class="token keyword">as</span> st
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd<font></font>
+<font></font>
+dataframe <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>
+    np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    columns<span class="token operator">=</span><span class="token punctuation">(</span><span class="token string">'col %d'</span> <span class="token operator">%</span> i <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><font></font>
+<font></font>
+st<span class="token punctuation">.</span>dataframe<span class="token punctuation">(</span>dataframe<span class="token punctuation">.</span>style<span class="token punctuation">.</span>highlight_max<span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+
+                        </div>
+                    </section>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">O Streamlit também possui um método para geração de
+                                tabelas estáticas:
+                            </font>
+                        </font><a href="/library/api-reference/data/st.table"><code>st.table()</code></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">.</font>
+                        </font>
+                    </p>
+                    <section class="code_Container__v4rq_">
+                        <div class="code-toolbar">
+                            <pre class="language-python"
+                                tabindex="0"><code class="language-python"><span class="token keyword">import</span> streamlit <span class="token keyword">as</span> st
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd<font></font>
+<font></font>
+dataframe <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>
+    np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    columns<span class="token operator">=</span><span class="token punctuation">(</span><span class="token string">'col %d'</span> <span class="token operator">%</span> i <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+st<span class="token punctuation">.</span>table<span class="token punctuation">(</span>dataframe<span class="token punctuation">)</span></code></pre>
+
+                        </div>
+                    </section><a name="draw-charts-and-maps" class="headerLink_HashLink___Wih5"></a>
+                    <h3 class="headerLink_HeaderContainer__68tak group"><a aria-hidden="true" tabindex="-1"
+                            href="#draw-charts-and-maps"><span class="icon icon-link"></span></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Desenhe gráficos e mapas</font>
+                        </font>
+
+                    </h3>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">O Streamlit suporta várias bibliotecas de gráficos de
+                                dados populares como </font>
+                        </font><a href="/library/api-reference#chart-elements">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Matplotlib, Altair, deck.gl e muito mais</font>
+                            </font>
+                        </a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;"> . </font>
+                            <font style="vertical-align: inherit;">Nesta seção, você adicionará um gráfico de barras, um
+                                gráfico de linhas e um mapa ao seu aplicativo.</font>
+                        </font>
+                    </p><a name="draw-a-line-chart" class="headerLink_HashLink___Wih5"></a>
+                    <h3 class="headerLink_HeaderContainer__68tak group"><a aria-hidden="true" tabindex="-1"
+                            href="#draw-a-line-chart"><span class="icon icon-link"></span></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Desenhe um gráfico de linhas</font>
+                        </font>
+
+                    </h3>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Você pode adicionar facilmente um gráfico de linhas
+                                ao seu aplicativo com o
+                            </font>
+                        </font><a href="/library/api-reference/charts/st.line_chart"><code>st.line_chart()</code></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">. </font>
+                            <font style="vertical-align: inherit;">Vamos gerar uma amostra aleatória usando o Numpy e,
+                                em seguida, mapeá-la.</font>
+                        </font>
+                    </p>
+                    <section class="code_Container__v4rq_">
+                        <div class="code-toolbar">
+                            <pre class="language-python"
+                                tabindex="0"><code class="language-python"><span class="token keyword">import</span> streamlit <span class="token keyword">as</span> st
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd<font></font>
+<font></font>
+chart_data <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>
+     np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+     columns<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><font></font>
+<font></font>
+st<span class="token punctuation">.</span>line_chart<span class="token punctuation">(</span>chart_data<span class="token punctuation">)</span></code></pre>
+
+                        </div>
+                    </section><a name="plot-a-map" class="headerLink_HashLink___Wih5"></a>
+                    <h3 class="headerLink_HeaderContainer__68tak group"><a aria-hidden="true" tabindex="-1"
+                            href="#plot-a-map"><span class="icon icon-link"></span></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Traçar um mapa</font>
+                        </font>
+
+                    </h3>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Com </font>
+                        </font><a href="/library/api-reference/charts/st.map"><code>st.map()</code></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">você pode exibir pontos de dados em um mapa. </font>
+                            <font style="vertical-align: inherit;">Vamos usar o Numpy para gerar alguns dados de amostra
+                                e plotá-los em um mapa de São Francisco.</font>
+                        </font>
+                    </p>
+                    <section class="code_Container__v4rq_">
+                        <div class="code-toolbar">
+                            <pre class="language-python"
+                                tabindex="0"><code class="language-python"><span class="token keyword">import</span> streamlit <span class="token keyword">as</span> st
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd<font></font>
+<font></font>
+map_data <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>
+    np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token punctuation">[</span><span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token punctuation">[</span><span class="token number">37.76</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">122.4</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    columns<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'lat'</span><span class="token punctuation">,</span> <span class="token string">'lon'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><font></font>
+<font></font>
+st<span class="token punctuation">.</span><span class="token builtin">map</span><span class="token punctuation">(</span>map_data<span class="token punctuation">)</span></code></pre>
+
+                        </div>
+                    </section><a name="widgets" class="headerLink_HashLink___Wih5"></a>
+                    <h2 class="headerLink_HeaderContainer__68tak group"><a aria-hidden="true" tabindex="-1"
+                            href="#widgets"><span class="icon icon-link"></span></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Widgets</font>
+                        </font>
+
+                    </h2>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Quando você tiver os dados ou o modelo no estado que
+                                deseja explorar, poderá adicionar widgets como </font>
+                        </font><a href="/library/api-reference/widgets/st.slider"><code>st.slider()</code></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">,
+                            </font>
+                        </font><a href="/library/api-reference/widgets/st.button"><code>st.button()</code></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">ou
+                            </font>
+                        </font><a href="/library/api-reference/widgets/st.selectbox"><code>st.selectbox()</code></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">. </font>
+                            <font style="vertical-align: inherit;">É muito simples — trate os widgets como variáveis:
+                            </font>
+                        </font>
+                    </p>
+                    <section class="code_Container__v4rq_">
+                        <div class="code-toolbar">
+                            <pre class="language-python"
+                                tabindex="0"><code class="language-python"><span class="token keyword">import</span> streamlit <span class="token keyword">as</span> st<font></font>
+x <span class="token operator">=</span> st<span class="token punctuation">.</span>slider<span class="token punctuation">(</span><span class="token string">'x'</span><span class="token punctuation">)</span>  <span class="token comment"># 👈 this is a widget</span>
+st<span class="token punctuation">.</span>write<span class="token punctuation">(</span>x<span class="token punctuation">,</span> <span class="token string">'squared is'</span><span class="token punctuation">,</span> x <span class="token operator">*</span> x<span class="token punctuation">)</span></code></pre>
+
+                        </div>
+                    </section>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Na primeira execução, o aplicativo acima deve gerar o
+                                texto "0 ao quadrado é 0". </font>
+                            <font style="vertical-align: inherit;">Então, toda vez que um usuário interage com um
+                                widget, o Streamlit simplesmente executa novamente seu script de cima para baixo,
+                                atribuindo o estado atual do widget à sua variável no processo.</font>
+                        </font>
+                    </p>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Por exemplo, se o usuário mover o controle deslizante
+                                para position </font>
+                        </font><code>10</code>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">, o Streamlit executará novamente o código acima e
+                                definirá </font>
+                        </font><code>x</code>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">de </font>
+                        </font><code>10</code>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">acordo. </font>
+                            <font style="vertical-align: inherit;">Então agora você deve ver o texto "10 ao quadrado é
+                                100".</font>
+                        </font>
+                    </p>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Os widgets também podem ser acessados ​​por chave, se
+                                você optar por especificar uma string a ser usada como chave exclusiva para o widget:
+                            </font>
+                        </font>
+                    </p>
+                    <section class="code_Container__v4rq_">
+                        <div class="code-toolbar">
+                            <pre class="language-python" tabindex="0"><code class="language-python"><span class="token keyword">import</span> streamlit <span class="token keyword">as</span> st<font></font>
+st<span class="token punctuation">.</span>text_input<span class="token punctuation">(</span><span class="token string">"Your name"</span><span class="token punctuation">,</span> key<span class="token operator">=</span><span class="token string">"name"</span><span class="token punctuation">)</span><font></font>
+<font></font>
+<span class="token comment"># You can access the value at any point with:</span>
+st<span class="token punctuation">.</span>session_state<span class="token punctuation">.</span>name</code></pre>
+
+                        </div>
+                    </section>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Cada widget com uma chave é adicionado
+                                automaticamente ao estado da sessão. </font>
+                            <font style="vertical-align: inherit;">Para obter mais informações sobre o estado da sessão,
+                                sua associação com o estado do widget e suas limitações, consulte </font>
+                        </font><a href="/library/api-reference/session-state">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">o Guia de referência da API do estado da sessão
+                                </font>
+                            </font>
+                        </a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;"> .</font>
+                        </font>
+                    </p><a name="use-checkboxes-to-showhide-data" class="headerLink_HashLink___Wih5"></a>
+                    <h3 class="headerLink_HeaderContainer__68tak group"><a aria-hidden="true" tabindex="-1"
+                            href="#use-checkboxes-to-showhide-data"><span class="icon icon-link"></span></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Use caixas de seleção para mostrar/ocultar dados
+                            </font>
+                        </font>
+
+                    </h3>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Um caso de uso para caixas de seleção é ocultar ou
+                                mostrar um gráfico ou seção específica em um aplicativo. </font>
+                        </font><a href="/library/api-reference/widgets/st.checkbox"><code>st.checkbox()</code></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">recebe um único argumento, que é o rótulo do widget.
+                            </font>
+                            <font style="vertical-align: inherit;">Neste exemplo, a caixa de seleção é usada para
+                                alternar uma instrução condicional.</font>
+                        </font>
+                    </p>
+                    <section class="code_Container__v4rq_">
+                        <div class="code-toolbar">
+                            <pre class="language-python" tabindex="0"><code class="language-python"><span class="token keyword">import</span> streamlit <span class="token keyword">as</span> st
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd<font></font>
+<font></font>
+<span class="token keyword">if</span> st<span class="token punctuation">.</span>checkbox<span class="token punctuation">(</span><span class="token string">'Show dataframe'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    chart_data <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>
+       np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>randn<span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+       columns<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><font></font>
+<font></font>
+    chart_data</code></pre>
+
+                        </div>
+                    </section><a name="use-a-selectbox-for-options" class="headerLink_HashLink___Wih5"></a>
+                    <h3 class="headerLink_HeaderContainer__68tak group"><a aria-hidden="true" tabindex="-1"
+                            href="#use-a-selectbox-for-options"><span class="icon icon-link"></span></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Use uma caixa de seleção para opções</font>
+                        </font>
+
+                    </h3>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Use </font>
+                        </font><a href="/library/api-reference/widgets/st.selectbox"><code>st.selectbox</code></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">para escolher entre uma série. </font>
+                            <font style="vertical-align: inherit;">Você pode escrever nas opções desejadas ou passar por
+                                uma coluna de matriz ou quadro de dados.</font>
+                        </font>
+                    </p>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Vamos usar o </font>
+                        </font><code>df</code>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">quadro de dados que criamos anteriormente.</font>
+                        </font>
+                    </p>
+                    <section class="code_Container__v4rq_">
+                        <div class="code-toolbar">
+                            <pre class="language-python" tabindex="0"><code class="language-python"><span class="token keyword">import</span> streamlit <span class="token keyword">as</span> st
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd<font></font>
+<font></font>
+df <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token string">'first column'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">'second column'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">40</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><font></font>
+<font></font>
+option <span class="token operator">=</span> st<span class="token punctuation">.</span>selectbox<span class="token punctuation">(</span>
+    <span class="token string">'Which number do you like best?'</span><span class="token punctuation">,</span>
+     df<span class="token punctuation">[</span><span class="token string">'first column'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><font></font>
+<font></font>
+<span class="token string">'You selected: '</span><span class="token punctuation">,</span> option</code></pre>
+
+                        </div>
+                    </section><a name="layout" class="headerLink_HashLink___Wih5"></a>
+                    <h2 class="headerLink_HeaderContainer__68tak group"><a aria-hidden="true" tabindex="-1"
+                            href="#layout"><span class="icon icon-link"></span></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Esquema</font>
+                        </font>
+
+                    </h2>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">O Streamlit facilita a organização de seus widgets em
+                                uma barra lateral do painel esquerdo com
+                            </font>
+                        </font><a href="/library/api-reference/layout/st.sidebar"><code>st.sidebar</code></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">. </font>
+                            <font style="vertical-align: inherit;">Cada elemento para o qual é passado
+                            </font>
+                        </font><a href="/library/api-reference/layout/st.sidebar"><code>st.sidebar</code></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">é fixado à esquerda, permitindo que os usuários se
+                                concentrem no conteúdo do seu aplicativo enquanto ainda têm acesso aos controles da
+                                interface do usuário.</font>
+                        </font>
+                    </p>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Por exemplo, se você deseja adicionar uma caixa de
+                                seleção e um controle deslizante a uma barra lateral, use </font>
+                        </font><code>st.sidebar.slider</code>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">e </font>
+                        </font><code>st.sidebar.selectbox</code>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">em vez de </font>
+                        </font><code>st.slider</code>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">e
+                            </font>
+                        </font><code>st.selectbox</code>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">:</font>
+                        </font>
+                    </p>
+                    <section class="code_Container__v4rq_">
+                        <div class="code-toolbar">
+                            <pre class="language-python" tabindex="0"><code class="language-python"><span class="token keyword">import</span> streamlit <span class="token keyword">as</span> st<font></font>
+<font></font>
+<span class="token comment"># Add a selectbox to the sidebar:</span>
+add_selectbox <span class="token operator">=</span> st<span class="token punctuation">.</span>sidebar<span class="token punctuation">.</span>selectbox<span class="token punctuation">(</span>
+    <span class="token string">'How would you like to be contacted?'</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token string">'Email'</span><span class="token punctuation">,</span> <span class="token string">'Home phone'</span><span class="token punctuation">,</span> <span class="token string">'Mobile phone'</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><font></font>
+<font></font>
+<span class="token comment"># Add a slider to the sidebar:</span>
+add_slider <span class="token operator">=</span> st<span class="token punctuation">.</span>sidebar<span class="token punctuation">.</span>slider<span class="token punctuation">(</span>
+    <span class="token string">'Select a range of values'</span><span class="token punctuation">,</span>
+    <span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token number">100.0</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">25.0</span><span class="token punctuation">,</span> <span class="token number">75.0</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span></code></pre>
+
+                        </div>
+                    </section>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Além da barra lateral, o Streamlit oferece várias
+                                outras maneiras de controlar o layout do seu aplicativo. </font>
+                        </font><a href="/library/api-reference/layout/st.columns"><code>st.columns</code></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">permite colocar widgets lado a lado e
+                            </font>
+                        </font><a href="/library/api-reference/layout/st.expander"><code>st.expander</code></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">economizar espaço ocultando conteúdo grande.</font>
+                        </font>
+                    </p>
+                    <section class="code_Container__v4rq_">
+                        <div class="code-toolbar">
+                            <pre class="language-python"
+                                tabindex="0"><code class="language-python"><span class="token keyword">import</span> streamlit <span class="token keyword">as</span> st<font></font>
+<font></font>
+left_column<span class="token punctuation">,</span> right_column <span class="token operator">=</span> st<span class="token punctuation">.</span>columns<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token comment"># You can use a column just like st.sidebar:</span>
+left_column<span class="token punctuation">.</span>button<span class="token punctuation">(</span><span class="token string">'Press me!'</span><span class="token punctuation">)</span><font></font>
+<font></font>
+<span class="token comment"># Or even better, call Streamlit functions inside a "with" block:</span>
+<span class="token keyword">with</span> right_column<span class="token punctuation">:</span>
+    chosen <span class="token operator">=</span> st<span class="token punctuation">.</span>radio<span class="token punctuation">(</span>
+        <span class="token string">'Sorting hat'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">(</span><span class="token string">"Gryffindor"</span><span class="token punctuation">,</span> <span class="token string">"Ravenclaw"</span><span class="token punctuation">,</span> <span class="token string">"Hufflepuff"</span><span class="token punctuation">,</span> <span class="token string">"Slytherin"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    st<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"You are in </span><span class="token interpolation"><span class="token punctuation">{</span>chosen<span class="token punctuation">}</span></span><span class="token string"> house!"</span></span><span class="token punctuation">)</span></code></pre>
+
+                        </div>
+                    </section>
+                    <section class="callout_Container__IU_XU note_Note__d8Rsn">
+                        <section class="iconHeader_Container__w4_WA"><i
+                                class="iconHeader_Icon__X6Kz_ iconHeader_LightBlueBackground__WINgP"
+                                style="transform:rotate(45deg)">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">push_pin</font>
+                                </font>
+                            </i>
+                            <h4 class="iconHeader_Title__vFC9I iconHeader_LightBlueText__XIICP">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Observação</font>
+                                </font>
+                            </h4>
+                        </section>
+                        <p><code>st.echo</code>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">e </font>
+                            </font><code>st.spinner</code>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">não são suportados atualmente dentro da barra
+                                    lateral ou opções de layout. </font>
+                                <font style="vertical-align: inherit;">No entanto, tenha certeza de que estamos
+                                    trabalhando para adicionar suporte para eles também!</font>
+                            </font>
+                        </p>
+                    </section><a name="show-progress" class="headerLink_HashLink___Wih5"></a>
+                    <h3 class="headerLink_HeaderContainer__68tak group"><a aria-hidden="true" tabindex="-1"
+                            href="#show-progress"><span class="icon icon-link"></span></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Mostrar progresso</font>
+                        </font>
+
+                    </h3>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Ao adicionar cálculos de longa duração a um
+                                aplicativo, você pode usar
+                            </font>
+                        </font><a href="/library/api-reference/status/st.progress"><code>st.progress()</code></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">para exibir o status em tempo real.</font>
+                        </font>
+                    </p>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Primeiro, vamos importar o tempo. </font>
+                            <font style="vertical-align: inherit;">Vamos usar o </font>
+                        </font><code>time.sleep()</code>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">método para simular uma computação de longa duração:
+                            </font>
+                        </font>
+                    </p>
+                    <section class="code_Container__v4rq_">
+                        <div class="code-toolbar">
+                            <pre class="language-python"
+                                tabindex="0"><code class="language-python"><span class="token keyword">import</span> time</code></pre>
+
+                        </div>
+                    </section>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Agora, vamos criar uma barra de progresso:</font>
+                        </font>
+                    </p>
+                    <section class="code_Container__v4rq_">
+                        <div class="code-toolbar">
+                            <pre class="language-python" tabindex="0"><code class="language-python"><span class="token keyword">import</span> streamlit <span class="token keyword">as</span> st
+<span class="token keyword">import</span> time<font></font>
+<font></font>
+<span class="token string">'Starting a long computation...'</span><font></font>
+<font></font>
+<span class="token comment"># Add a placeholder</span>
+latest_iteration <span class="token operator">=</span> st<span class="token punctuation">.</span>empty<span class="token punctuation">(</span><span class="token punctuation">)</span>
+bar <span class="token operator">=</span> st<span class="token punctuation">.</span>progress<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><font></font>
+<font></font>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token comment"># Update the progress bar with each iteration.</span>
+  latest_iteration<span class="token punctuation">.</span>text<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'Iteration </span><span class="token interpolation"><span class="token punctuation">{</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">}</span></span><span class="token string">'</span></span><span class="token punctuation">)</span>
+  bar<span class="token punctuation">.</span>progress<span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+  time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">0.1</span><span class="token punctuation">)</span><font></font>
+<font></font>
+<span class="token string">'...and now we\'re done!'</span></code></pre>
+
+                        </div>
+                    </section><a name="themes" class="headerLink_HashLink___Wih5"></a>
+                    <h2 class="headerLink_HeaderContainer__68tak group"><a aria-hidden="true" tabindex="-1"
+                            href="#themes"><span class="icon icon-link"></span></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Temas</font>
+                        </font>
+
+                    </h2>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">O Streamlit suporta temas claros e escuros prontos
+                                para uso. </font>
+                            <font style="vertical-align: inherit;">O Streamlit verificará primeiro se o usuário que está
+                                visualizando um aplicativo tem uma preferência de modo Claro ou Escuro definida por seu
+                                sistema operacional e navegador. </font>
+                            <font style="vertical-align: inherit;">Em caso afirmativo, essa preferência será usada.
+                            </font>
+                            <font style="vertical-align: inherit;">Caso contrário, o tema Light é aplicado por padrão.
+                            </font>
+                        </font>
+                    </p>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Você também pode alterar o tema ativo de "☰" →
+                                "Configurações".</font>
+                        </font>
+                    </p>
+                    <section class="image_Container__T51lH">
+                        <section class="image_InnerContainer__xOYBM"><img class="image_Image__PuLQa"
+                                src="../image/change_theme.gif" alt="Alterando temas" width="900px"></section>
+                    </section>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Deseja adicionar seu próprio tema a um aplicativo?
+                            </font>
+                            <font style="vertical-align: inherit;">O menu "Configurações" possui um editor de temas
+                                acessível clicando em "Editar tema ativo". </font>
+                            <font style="vertical-align: inherit;">Você pode usar este editor para experimentar cores
+                                diferentes e ver a atualização do seu aplicativo ao vivo.</font>
+                        </font>
+                    </p>
+                    <section class="image_Container__T51lH">
+                        <section class="image_InnerContainer__xOYBM"><img class="image_Image__PuLQa"
+                                src="../image/edit_theme.gif" alt="Edição de temas" width="900px"></section>
+                    </section>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Quando estiver satisfeito com seu trabalho, os temas
+                                podem ser salvos
+                            </font>
+                        </font><a href="/library/advanced-features/configuration#set-configuration-options">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">definindo as opções</font>
+                            </font>
+                        </a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">
+                                de configuração na </font>
+                        </font><code>[theme]</code>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">seção de configuração. </font>
+                            <font style="vertical-align: inherit;">Depois de definir um tema para seu aplicativo, ele
+                                aparecerá como "Tema personalizado" no seletor de temas e será aplicado por padrão em
+                                vez dos temas Claro e Escuro incluídos.</font>
+                        </font>
+                    </p>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Mais informações sobre as opções disponíveis ao
+                                definir um tema podem ser encontradas na </font>
+                        </font><a href="/library/advanced-features/theming">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">documentação da opção do tema</font>
+                            </font>
+                        </a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;"> .</font>
+                        </font>
+                    </p>
+                    <section class="callout_Container__IU_XU note_Note__d8Rsn">
+                        <section class="iconHeader_Container__w4_WA"><i
+                                class="iconHeader_Icon__X6Kz_ iconHeader_LightBlueBackground__WINgP"
+                                style="transform:rotate(45deg)">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">push_pin</font>
+                                </font>
+                            </i>
+                            <h4 class="iconHeader_Title__vFC9I iconHeader_LightBlueText__XIICP">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Observação</font>
+                                </font>
+                            </h4>
+                        </section>
+                        <p>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">O menu do editor de temas está disponível apenas
+                                    em desenvolvimento local. </font>
+                                <font style="vertical-align: inherit;">Se você implantou seu aplicativo usando o
+                                    Streamlit Cloud, o botão "Editar tema ativo" não será mais exibido no menu
+                                    "Configurações".</font>
+                            </font>
+                        </p>
+                    </section>
+                    <section class="callout_Container__IU_XU tip_Tip__UYVQt">
+
+                        <p>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Outra maneira de experimentar diferentes cores de
+                                    tema é ativar a opção "Executar ao salvar", editar seu arquivo config.toml e
+                                    observar como seu aplicativo é executado novamente com as novas cores de tema
+                                    aplicadas.</font>
+                            </font>
+                        </p>
+                    </section><a name="caching" class="headerLink_HashLink___Wih5"></a>
+                    <h2 class="headerLink_HeaderContainer__68tak group"><a aria-hidden="true" tabindex="-1"
+                            href="#caching"><span class="icon icon-link"></span></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Cache</font>
+                        </font>
+
+                    </h2>
+                    <section class="callout_Container__IU_XU important_Important__lWqst">
+                        <section class="iconHeader_Container__w4_WA"><i
+                                class="iconHeader_Icon__X6Kz_ iconHeader_OrangeBackground__oDs0b"
+                                style="transform:rotate(0deg)">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">prioridade_alta</font>
+                                </font>
+                            </i>
+                            <h4 class="iconHeader_Title__vFC9I iconHeader_OrangeText__UGPQU">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Importante</font>
+                                </font>
+                            </h4>
+                        </section>
+                        <p>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Estamos desenvolvendo novas primitivas de cache
+                                    que são mais fáceis de usar e muito mais rápidas do que </font>
+                            </font><code>@st.cache</code>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">. </font>
+                                <font style="vertical-align: inherit;">🚀 Para saber mais, leia Primitivos </font>
+                            </font><a href="/library/advanced-features/experimental-cache-primitives">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">de cache experimental</font>
+                                </font>
+                            </a>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;"> .</font>
+                            </font>
+                        </p>
+                    </section>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">O cache Streamlit permite que seu aplicativo seja
+                                executado rapidamente, mesmo ao carregar dados da Web, manipular grandes conjuntos de
+                                dados ou realizar cálculos caros.</font>
+                        </font>
+                    </p>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Para usar o cache, envolva funções com o
+                            </font>
+                        </font><a href="/library/api-reference/performance/st.cache"><code>@st.cache</code></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">decorador:</font>
+                        </font>
+                    </p>
+                    <section class="code_Container__v4rq_">
+                        <div class="code-toolbar">
+                            <pre class="language-python" tabindex="0"><code class="language-python"><span class="token keyword">import</span> streamlit <span class="token keyword">as</span> st<font></font>
+<font></font>
+<span class="token decorator annotation punctuation">@st<span class="token punctuation">.</span>cache</span>  <span class="token comment"># 👈 This function will be cached</span>
+<span class="token keyword">def</span> <span class="token function">my_slow_function</span><span class="token punctuation">(</span>arg1<span class="token punctuation">,</span> arg2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Do something really slow in here!</span>
+    <span class="token keyword">return</span> the_output</code></pre>
+
+                        </div>
+                    </section>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Quando você marca uma função com o </font>
+                        </font><a href="/library/api-reference/performance/st.cache"><code>@st.cache</code></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">
+                                decorador, ele diz ao Streamlit que sempre que a função é chamada, ele precisa verificar
+                                algumas coisas:</font>
+                        </font>
+                    </p>
+                    <ol>
+                        <li>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Os parâmetros de entrada com os quais você chamou
+                                    a função</font>
+                            </font>
+                        </li>
+                        <li>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">O valor de qualquer variável externa usada na
+                                    função</font>
+                            </font>
+                        </li>
+                        <li>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">O corpo da função</font>
+                            </font>
+                        </li>
+                        <li>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">O corpo de qualquer função usada dentro da função
+                                    em cache</font>
+                            </font>
+                        </li>
+                    </ol>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Se esta é a primeira vez que o Streamlit vê esses
+                                quatro componentes com esses valores exatos e nessa combinação e ordem exatas, ele
+                                executa a função e armazena o resultado em um cache local. </font>
+                            <font style="vertical-align: inherit;">Então, na próxima vez que a função em cache for
+                                chamada, se nenhum desses componentes for alterado, o Streamlit pulará a execução da
+                                função completamente e, em vez disso, retornará a saída armazenada anteriormente no
+                                cache.</font>
+                        </font>
+                    </p>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Para obter mais informações sobre o cache do
+                                Streamlit, seus parâmetros de configuração e suas limitações, consulte </font>
+                        </font><a href="/library/advanced-features/caching">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Cache</font>
+                            </font>
+                        </a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;"> .</font>
+                        </font>
+                    </p><a name="app-model" class="headerLink_HashLink___Wih5"></a>
+                    <h2 class="headerLink_HeaderContainer__68tak group"><a aria-hidden="true" tabindex="-1"
+                            href="#app-model"><span class="icon icon-link"></span></a>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Modelo do aplicativo</font>
+                        </font>
+
+                    </h2>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Agora que você sabe um pouco mais sobre todas as
+                                peças individuais, vamos fechar o ciclo e revisar como elas funcionam juntas:</font>
+                        </font>
+                    </p>
+                    <ol>
+                        <li>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Aplicativos Streamlit são scripts Python
+                                    executados de cima para baixo</font>
+                            </font>
+                        </li>
+                        <li>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Sempre que um usuário abre uma guia do navegador
+                                    apontando para seu aplicativo, o script é executado novamente</font>
+                            </font>
+                        </li>
+                        <li>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">À medida que o script é executado, o Streamlit
+                                    desenha sua saída ao vivo em um navegador</font>
+                            </font>
+                        </li>
+                        <li>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Os scripts usam o cache Streamlit para evitar
+                                    recalcular funções caras, então as atualizações acontecem muito rápido</font>
+                            </font>
+                        </li>
+                        <li>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Toda vez que um usuário interage com um widget,
+                                    seu script é executado novamente e o valor de saída desse widget é definido para o
+                                    novo valor durante essa execução.</font>
+                            </font>
+                        </li>
+                    </ol>
+
+                    <section class="image_Container__T51lH">
+                        <section class="image_InnerContainer__xOYBM"><img class="image_Image__PuLQa"
+                                src="../image/app_model.png" alt="O modelo de aplicativo Streamlit"></section>
+                    </section>
+
+                </div>
+            </article>
+
+        </section>
+
+    </div>
+
+</body>
+
+</html>
